@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: email-client-backend
+  autoconfigure:
+    exclude: net.devh.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration
+  
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/emailclient}
+    username: ${POSTGRES_USER:emailclient}
+    password: ${POSTGRES_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+  
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_CLIENT_SMTP_USER}
+    password: ${EMAIL_CLIENT_SMTP_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+logging:
+  level:
+    com:
+      emailclient:
+        backend: DEBUG
+    org:
+      hibernate:
+        SQL: INFO
+
+grpc:
+  server:
+    port: 9090
+
+email-client:
+  imap:
+    host: ${EMAIL_CLIENT_IMAP_HOST}
+    port: ${EMAIL_CLIENT_IMAP_PORT}
+    username: ${EMAIL_CLIENT_IMAP_USER}
+    password: ${EMAIL_CLIENT_IMAP_PASSWORD}
+    fetch-batch-size: 50
+  storage:
+    preview-limit: 50
+  crypto:
+    master-key: ${EMAIL_CLIENT_MASTER_KEY}
+    salt: ${EMAIL_CLIENT_CRYPTO_SALT}
+

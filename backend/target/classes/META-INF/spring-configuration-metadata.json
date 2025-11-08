@@ -1,0 +1,84 @@
+{
+  "groups": [
+    {
+      "name": "email-client",
+      "type": "com.emailclient.backend.email.EmailClientProperties",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties"
+    },
+    {
+      "name": "email-client.crypto",
+      "type": "com.emailclient.backend.email.EmailClientProperties$Crypto",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties",
+      "sourceMethod": "public com.emailclient.backend.email.EmailClientProperties.Crypto getCrypto() "
+    },
+    {
+      "name": "email-client.imap",
+      "type": "com.emailclient.backend.email.EmailClientProperties$Imap",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties",
+      "sourceMethod": "public com.emailclient.backend.email.EmailClientProperties.Imap getImap() "
+    },
+    {
+      "name": "email-client.smtp",
+      "type": "com.emailclient.backend.email.EmailClientProperties$Smtp",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties",
+      "sourceMethod": "public com.emailclient.backend.email.EmailClientProperties.Smtp getSmtp() "
+    },
+    {
+      "name": "email-client.storage",
+      "type": "com.emailclient.backend.email.EmailClientProperties$Storage",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties",
+      "sourceMethod": "public com.emailclient.backend.email.EmailClientProperties.Storage getStorage() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "email-client.crypto.master-key",
+      "type": "java.lang.String",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Crypto"
+    },
+    {
+      "name": "email-client.crypto.salt",
+      "type": "java.lang.String",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Crypto"
+    },
+    {
+      "name": "email-client.imap.fetch-batch-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.imap.host",
+      "type": "java.lang.String",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.imap.password",
+      "type": "java.lang.String",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.imap.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.imap.ssl",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.imap.username",
+      "type": "java.lang.String",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Imap"
+    },
+    {
+      "name": "email-client.storage.preview-limit",
+      "type": "java.lang.Integer",
+      "sourceType": "com.emailclient.backend.email.EmailClientProperties$Storage"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

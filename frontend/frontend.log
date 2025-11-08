@@ -1,0 +1,144 @@
+
+> email-client-frontend@0.0.1 dev
+> vite
+
+
+  VITE v5.4.21  ready in 264 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+7:31:25 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:31:30 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:33 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:35 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:41 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:44 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:48 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:51 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:53 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:31:54 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:32:26 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:32:26 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:32:58 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:32:58 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:36:39 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+7:36:41 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:36:43 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:36:58 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+7:37:01 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:38:34 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+7:38:34 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:58:53 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+7:58:56 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+7:59:11 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:59:14 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:59:14 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:59:16 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+7:59:16 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:16 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:19 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:19 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:27 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:29 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+7:59:29 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:01:43 PM [vite] hmr update /src/components/Sidebar.tsx, /src/index.css
+8:01:43 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:01:43 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:02:08 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:02:18 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:02:23 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:03:16 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:03:19 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:03:27 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:04:42 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:04:45 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:04:46 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:04:50 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:04:53 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:05:03 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:05:05 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:05:08 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:05:08 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:28:12 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:28:49 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:29:01 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:30:14 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:30:15 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:30:17 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:30:52 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:30:57 PM [vite] hmr update /src/components/EmailDetail.tsx, /src/index.css
+8:32:33 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:32:35 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:33:12 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:33:40 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:46:37 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:46:40 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:46:41 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:46:44 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:46:46 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:46:47 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:46:54 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:46:55 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:46:58 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:04 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:04 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:06 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:09 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:11 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:13 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:20 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:22 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:24 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:25 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:29 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:33 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:40 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:47:52 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:47:52 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:47:52 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:51:06 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:10 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:15 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:19 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:21 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:22 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:23 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:25 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:51:39 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:51:43 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:51:55 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:51:55 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:56:59 PM [vite] hmr update /src/index.css, /src/App.tsx, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:56:59 PM [vite] hmr update /src/index.css, /src/App.tsx, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:56:59 PM [vite] hmr update /src/index.css, /src/App.tsx, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:09 PM [vite] hmr update /src/App.tsx, /src/index.css, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:11 PM [vite] hmr update /src/App.tsx, /src/index.css, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:11 PM [vite] hmr update /src/App.tsx, /src/index.css, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:14 PM [vite] hmr update /src/App.tsx, /src/index.css, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:15 PM [vite] hmr update /src/App.tsx, /src/index.css, /src/components/ComposeEmail.tsx, /src/components/EmailList.tsx, /src/components/SentEmails.tsx, /src/components/EmailDetail.tsx
+8:57:56 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:58:00 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:58:06 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:58:08 PM [vite] page reload src/components/TrashEmails.tsx
+8:58:10 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:58:17 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:58:23 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:58:27 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:58:30 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:58:35 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/TrashEmails.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/App.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/TrashEmails.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+8:58:49 PM [vite] hmr update /src/App.tsx, /src/index.css
+9:02:38 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+9:02:43 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+9:02:49 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+9:02:50 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
+9:03:10 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+9:03:13 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+9:03:37 PM [vite] hmr update /src/components/SentEmails.tsx, /src/index.css
+9:03:37 PM [vite] hmr update /src/components/EmailList.tsx, /src/index.css
