@@ -2,14 +2,14 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/emailclient
     username: emailclient
-    password: DhUzEnqkaXa4ikI533mPPFy5SUo3oD5z
+    password: test-database-password
     driver-class-name: org.postgresql.Driver
 
   mail:
-    host: smtp.gmail.com
+    host: smtp.test.example
     port: 587
-    username: nakuldesai007@gmail.com
-    password: aeyuydrkwnzdydvq
+    username: test-smtp-user@example.com
+    password: test-smtp-password
 
 grpc:
   server:
@@ -17,15 +17,15 @@ grpc:
 
 email-client:
   imap:
-    host: imap.gmail.com
+    host: imap.test.example
     port: 993
-    username: nakuldesai007@gmail.com
-    password: aeyuydrkwnzdydvq
+    username: test-imap-user@example.com
+    password: test-imap-password
     fetch-batch-size: 50
   storage:
     preview-limit: 50
   crypto:
-    master-key: I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=
-    salt: 0CHc4CDlRF3BY9GYRK0+vg==
+    master-key: test-master-key
+    salt: test-crypto-salt
 
 

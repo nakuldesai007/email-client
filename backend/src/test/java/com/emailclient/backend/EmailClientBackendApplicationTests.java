@@ -5,17 +5,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(properties = {
         "grpc.server.port=0",
-        "email-client.imap.host=imap.gmail.com",
+        "email-client.imap.host=imap.test.example",
         "email-client.imap.port=993",
-        "email-client.imap.username=nakuldesai007@gmail.com",
-        "email-client.imap.password=aeyuydrkwnzdydvq",
-        "email-client.crypto.master-key=I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=",
-        "email-client.crypto.salt=0CHc4CDlRF3BY9GYRK0+vg==",
-        "spring.mail.username=nakuldesai007@gmail.com",
-        "spring.mail.password=aeyuydrkwnzdydvq",
+        "email-client.imap.username=test-imap-user@example.com",
+        "email-client.imap.password=test-imap-password",
+        "email-client.crypto.master-key=test-master-key",
+        "email-client.crypto.salt=test-crypto-salt",
+        "spring.mail.username=test-smtp-user@example.com",
+        "spring.mail.password=test-smtp-password",
         "spring.datasource.url=jdbc:postgresql://localhost:5432/emailclient",
         "spring.datasource.username=emailclient",
-        "spring.datasource.password=DhUzEnqkaXa4ikI533mPPFy5SUo3oD5z"
+        "spring.datasource.password=test-database-password"
 })
 class EmailClientBackendApplicationTests {
 
@@ -23,4 +23,3 @@ class EmailClientBackendApplicationTests {
     void contextLoads() {
     }
 }
-

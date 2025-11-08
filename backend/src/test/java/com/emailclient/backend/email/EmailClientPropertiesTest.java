@@ -25,25 +25,24 @@ class EmailClientPropertiesTest {
     void bindsImapAndCryptoSettingsFromConfiguration() {
         contextRunner
                 .withPropertyValues(
-                        "email-client.imap.host=imap.gmail.com",
+                        "email-client.imap.host=imap.test.example",
                         "email-client.imap.port=993",
-                        "email-client.imap.username=nakuldesai007@gmail.com",
-                        "email-client.imap.password=aeyuydrkwnzdydvq",
-                        "email-client.crypto.master-key=I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=",
-                        "email-client.crypto.salt=0CHc4CDlRF3BY9GYRK0+vg=="
-                )
+                        "email-client.imap.username=test-imap-user@example.com",
+                        "email-client.imap.password=test-imap-password",
+                        "email-client.crypto.master-key=test-master-key",
+                        "email-client.crypto.salt=test-crypto-salt")
                 .run(context -> {
                     assertThat(context).hasSingleBean(EmailClientProperties.class);
 
                     EmailClientProperties properties = context.getBean(EmailClientProperties.class);
 
-                    assertThat(properties.getImap().getHost()).isEqualTo("imap.gmail.com");
+                    assertThat(properties.getImap().getHost()).isEqualTo("imap.test.example");
                     assertThat(properties.getImap().getPort()).isEqualTo(993);
-                    assertThat(properties.getImap().getUsername()).isEqualTo("nakuldesai007@gmail.com");
-                    assertThat(properties.getImap().getPassword()).isEqualTo("aeyuydrkwnzdydvq");
+                    assertThat(properties.getImap().getUsername()).isEqualTo("test-imap-user@example.com");
+                    assertThat(properties.getImap().getPassword()).isEqualTo("test-imap-password");
                     assertThat(properties.getImap().isSsl()).isTrue();
-                    assertThat(properties.getCrypto().getMasterKey()).isEqualTo("I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=");
-                    assertThat(properties.getCrypto().getSalt()).isEqualTo("0CHc4CDlRF3BY9GYRK0+vg==");
+                    assertThat(properties.getCrypto().getMasterKey()).isEqualTo("test-master-key");
+                    assertThat(properties.getCrypto().getSalt()).isEqualTo("test-crypto-salt");
                 });
     }
 
@@ -52,18 +51,20 @@ class EmailClientPropertiesTest {
         contextRunner
                 .withInitializer(context -> {
                     Map<String, Object> env = new HashMap<>();
-                    env.put("EMAIL_CLIENT_IMAP_HOST", "imap.gmail.com");
+                    env.put("EMAIL_CLIENT_IMAP_HOST", "imap.test.example");
                     env.put("EMAIL_CLIENT_IMAP_PORT", "993");
-                    env.put("EMAIL_CLIENT_IMAP_USER", "nakuldesai007@gmail.com");
-                    env.put("EMAIL_CLIENT_IMAP_USERNAME", "nakuldesai007@gmail.com");
-                    env.put("EMAIL_CLIENT_IMAP_PASSWORD", "aeyuydrkwnzdydvq");
-                    env.put("EMAIL_CLIENT_CRYPTO_MASTER_KEY", "I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=");
-                    env.put("EMAIL_CLIENT_CRYPTO_SALT", "0CHc4CDlRF3BY9GYRK0+vg==");
+                    env.put("EMAIL_CLIENT_IMAP_USER", "test-imap-user@example.com");
+                    env.put("EMAIL_CLIENT_IMAP_USERNAME", "test-imap-user@example.com");
+                    env.put("EMAIL_CLIENT_IMAP_PASSWORD", "test-imap-password");
+                    env.put("EMAIL_CLIENT_CRYPTO_MASTER_KEY", "test-master-key");
+                    env.put("EMAIL_CLIENT_CRYPTO_SALT", "test-crypto-salt");
 
                     MutablePropertySources propertySources = context.getEnvironment().getPropertySources();
-                    SystemEnvironmentPropertySource propertySource = new SystemEnvironmentPropertySource(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME, env);
+                    SystemEnvironmentPropertySource propertySource = new SystemEnvironmentPropertySource(
+                            StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME, env);
                     if (propertySources.contains(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME)) {
-                        propertySources.replace(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME, propertySource);
+                        propertySources.replace(StandardEnvironment.SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME,
+                                propertySource);
                     } else {
                         propertySources.addFirst(propertySource);
                     }
@@ -73,12 +74,12 @@ class EmailClientPropertiesTest {
 
                     EmailClientProperties properties = context.getBean(EmailClientProperties.class);
 
-                    assertThat(properties.getImap().getHost()).isEqualTo("imap.gmail.com");
+                    assertThat(properties.getImap().getHost()).isEqualTo("imap.test.example");
                     assertThat(properties.getImap().getPort()).isEqualTo(993);
-                    assertThat(properties.getImap().getUsername()).isEqualTo("nakuldesai007@gmail.com");
-                    assertThat(properties.getImap().getPassword()).isEqualTo("aeyuydrkwnzdydvq");
-                    assertThat(properties.getCrypto().getMasterKey()).isEqualTo("I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=");
-                    assertThat(properties.getCrypto().getSalt()).isEqualTo("0CHc4CDlRF3BY9GYRK0+vg==");
+                    assertThat(properties.getImap().getUsername()).isEqualTo("test-imap-user@example.com");
+                    assertThat(properties.getImap().getPassword()).isEqualTo("test-imap-password");
+                    assertThat(properties.getCrypto().getMasterKey()).isEqualTo("test-master-key");
+                    assertThat(properties.getCrypto().getSalt()).isEqualTo("test-crypto-salt");
                 });
     }
 
@@ -88,9 +89,8 @@ class EmailClientPropertiesTest {
                 .withPropertyValues(
                         "email-client.imap.host=",
                         "email-client.imap.port=993",
-                        "email-client.crypto.master-key=I6eTnrSdxciZMsxCbRGIhEW52znNEWtW3tdfJZlKpQQ=",
-                        "email-client.crypto.salt=0CHc4CDlRF3BY9GYRK0+vg=="
-                )
+                        "email-client.crypto.master-key=test-master-key",
+                        "email-client.crypto.salt=test-crypto-salt")
                 .run(context -> {
                     assertThat(context).hasSingleBean(EmailClientProperties.class);
                     EmailClientProperties properties = context.getBean(EmailClientProperties.class);
@@ -108,4 +108,3 @@ class EmailClientPropertiesTest {
     static class TestConfiguration {
     }
 }
-
