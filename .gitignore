@@ -1,0 +1,17 @@
+#
+# Project-wide ignore rules
+#
+
+# Maven / Gradle build output
+**/target/
+
+# Node build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Environment & system files
+.env
+.DS_Store
+node_modules/
+*.log
+

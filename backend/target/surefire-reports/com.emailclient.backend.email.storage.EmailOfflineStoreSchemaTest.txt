@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.emailclient.backend.email.storage.EmailOfflineStoreSchemaTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.238 s -- in com.emailclient.backend.email.storage.EmailOfflineStoreSchemaTest
