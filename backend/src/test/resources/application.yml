@@ -25,7 +25,7 @@ email-client:
   storage:
     preview-limit: 50
   crypto:
-    master-key: test-master-key
-    salt: test-crypto-salt
+    master-key: MDEyMzQ1Njc4OUFCQ0RFRjAxMjM0NTY3ODlBQkNERUY=
+    salt: c2FtcGxlLXRlc3Qtc2FsdCEh
 
 
