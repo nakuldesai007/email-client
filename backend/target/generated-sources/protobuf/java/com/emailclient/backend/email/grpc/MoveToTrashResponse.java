@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NEW_ID_FIELD_NUMBER;
     hash = (53 * hash) + getNewId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
-    ((com.google.protobuf.AbstractMessageLite<com.emailclient.backend.email.grpc.MoveToTrashResponse, ?>) this).memoizedHashCode = hash;
+    memoizedHashCode = hash;
     return hash;
   }
 

@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
-    ((com.google.protobuf.AbstractMessageLite<com.emailclient.backend.email.grpc.ListTrashRequest, ?>) this).memoizedHashCode = hash;
+    memoizedHashCode = hash;
     return hash;
   }
 

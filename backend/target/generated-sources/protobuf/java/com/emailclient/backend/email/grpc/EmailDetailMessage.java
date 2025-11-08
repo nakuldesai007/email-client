@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
     return new EmailDetailMessage();
@@ -466,7 +467,7 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getCcList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
-    ((com.google.protobuf.AbstractMessageLite<com.emailclient.backend.email.grpc.EmailDetailMessage, ?>) this).memoizedHashCode = hash;
+    memoizedHashCode = hash;
     return hash;
   }
 

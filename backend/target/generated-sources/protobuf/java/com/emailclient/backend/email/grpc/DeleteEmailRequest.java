@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
-    ((com.google.protobuf.AbstractMessageLite<com.emailclient.backend.email.grpc.DeleteEmailRequest, ?>) this).memoizedHashCode = hash;
+    memoizedHashCode = hash;
     return hash;
   }
 
