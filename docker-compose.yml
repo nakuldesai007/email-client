@@ -29,7 +29,51 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      backend:
+        condition: service_started
+
+  backend:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      BW_SESSION: ${BW_SESSION:-}
+      USE_BITWARDEN: "true"
+      BW_CLIENTID: ${BW_CLIENTID:-}
+      BW_CLIENTSECRET: ${BW_CLIENTSECRET:-}
+      BW_MASTER_PASSWORD: ${BW_MASTER_PASSWORD:-}
+      BW_EMAIL: ${BW_EMAIL:-}
+      JAVA_TOOL_OPTIONS: "-XX:+EnableDynamicAgentLoading"
+    volumes:
+      - ./backend:/app/backend
+      - ./scripts:/app/scripts
+      - backend-m2:/root/.m2
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_GRPC_BASE_URL: http://localhost:8080
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+    depends_on:
+      envoy:
+        condition: service_started
 
 volumes:
   postgres-data:
+  frontend-node-modules:
+  backend-m2:
 

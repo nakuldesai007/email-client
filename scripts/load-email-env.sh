@@ -9,9 +9,29 @@ if [[ -z "${BW_SESSION:-}" ]]; then
   return 1
 fi
 
+bw_status_json=$(bw status --session "${BW_SESSION}" --nointeraction 2>/dev/null || true)
+if [[ -z "${bw_status_json}" || "${bw_status_json}" == *"You are not logged in."* ]]; then
+  echo "❌ Bitwarden session is invalid or locked. Please refresh BW_SESSION."
+  exit 1
+fi
+bw_status_val=$(echo "${bw_status_json}" | jq -r '.status' 2>/dev/null || echo "")
+if [[ "${bw_status_val}" != "unlocked" ]]; then
+  echo "❌ Bitwarden vault is not unlocked (status: ${bw_status}). Please refresh BW_SESSION."
+  exit 1
+fi
+
 bw_field() {
   bw get item "Email Client Backend" --session "$BW_SESSION" \
     | jq -r --arg name "$1" '.fields[] | select(.name==$name).value'
+}
+
+require_value() {
+  local label="$1"
+  local value="$2"
+  if [[ -z "${value}" || "${value}" == "null" ]]; then
+    echo "❌ Bitwarden returned an empty value for '${label}'. Ensure the session is valid and the field exists."
+    exit 1
+  fi
 }
 
 echo "🔐 Loading credentials from Bitwarden..."
@@ -21,10 +41,14 @@ export EMAIL_CLIENT_IMAP_HOST=$(bw_field "IMAP_HOST" || echo "imap.gmail.com")
 export EMAIL_CLIENT_IMAP_PORT=$(bw_field "IMAP_PORT" || echo "993")
 export EMAIL_CLIENT_IMAP_USER=$(bw_field "IMAP_USER")
 export EMAIL_CLIENT_IMAP_PASSWORD=$(bw_field "IMAP_PASSWORD")
+require_value "IMAP_USER" "${EMAIL_CLIENT_IMAP_USER}"
+require_value "IMAP_PASSWORD" "${EMAIL_CLIENT_IMAP_PASSWORD}"
 
 # SMTP Configuration
 export EMAIL_CLIENT_SMTP_USER=$(bw_field "SMTP_USER")
 export EMAIL_CLIENT_SMTP_PASSWORD=$(bw_field "SMTP_PASSWORD")
+require_value "SMTP_USER" "${EMAIL_CLIENT_SMTP_USER}"
+require_value "SMTP_PASSWORD" "${EMAIL_CLIENT_SMTP_PASSWORD}"
 
 # PostgreSQL Configuration (no password required for local dev)
 export POSTGRES_URL=$(bw_field "POSTGRES_URL" 2>/dev/null || echo "jdbc:postgresql://localhost:5432/emailclient")

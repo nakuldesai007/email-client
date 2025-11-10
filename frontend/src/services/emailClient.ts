@@ -21,9 +21,12 @@ import type {
   RestoreEmailResponse,
 } from '../generated/email_service';
 
+const baseUrl =
+  import.meta.env.VITE_GRPC_BASE_URL?.trim() || 'http://localhost:8080';
+
 // Create transport that points to Envoy proxy (defaults to port 8080)
 const transport = new GrpcWebFetchTransport({
-  baseUrl: 'http://localhost:8080',
+  baseUrl,
   timeout: 30000, // 30 second timeout for slower operations like fetching email content
 });
 
@@ -65,7 +68,7 @@ export async function sendEmail(params: {
     bcc: params.bcc ?? [],
     attachments: params.attachments ?? [],
   };
-  
+
   const { response } = await emailClient.sendEmail(request);
   return response;
 }
